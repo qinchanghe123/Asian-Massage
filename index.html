@@ -1,897 +1,681 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>King Foot Massage</title>
-    <meta
-      name="description"
-      content="Experience ultimate relaxation at King Foot Massage, known for exceptional massages tailored to your needs. Clients love our serene environment, skilled therapists, and personalized care. Unwind and recharge with us."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Matemasie&display=swap"
-      rel="stylesheet"
-    />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asian Massage | Professional Therapy & Relaxation</title>
     <style>
-      /* Comfort Spa Stylesheet */
-
-      /* Base Styles */
-      body {
-        font-family: 'Josefin Sans', sans-serif;
-        margin: 0;
-        padding: 0;
-        background-color: #f9f9f9;
-        color: #333;
-        line-height: 1.6;
-      }
-
-      h1, h2, h3, h4, h5, h6 {
-        font-weight: 600;
-        margin-bottom: 1rem;
-      }
-
-      section {
-        padding: 60px 20px;
-        text-align: center;
-      }
-
-      section h2 {
-        font-size: 2.5rem;
-        margin-bottom: 1.5rem;
-        color: #333;
-      }
-
-      section h4 {
-        font-size: 1.2rem;
-        color: #666;
-        margin-bottom: 2rem;
-      }
-
-      /* Navigation */
-      nav {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1rem;
-        background-color: #6B73FF; /* Calming purple-blue background */
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 1000;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      }
-
-      /* Add margin to the top of the body to avoid content being hidden behind the fixed nav */
-      body {
-        margin-top: 70px; /* Adjust based on nav height */
-      }
-
-      nav img {
-        height: 50px;
-      }
-
-      nav ul {
-        list-style: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-      }
-
-      nav ul li {
-        margin-left: 20px;
-      }
-
-      nav ul li a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.1rem;
-        transition: color 0.3s ease;
-      }
-
-      nav ul li a:hover {
-        color: #FFD700;
-      }
-
-      /* Home Section */
-      .home {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        background-size: cover;
-        background-position: center;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        color: white;
-        text-align: center;
-        margin-top: 70px;
-        position: relative;
-        overflow: hidden;
-      }
-
-      .home::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="white" opacity="0.1"><path d="M0,20 Q250,80 500,20 T1000,20 V100 H0 Z"/></svg>') repeat-x;
-        background-size: 1000px 100px;
-        animation: wave 10s linear infinite;
-      }
-
-      @keyframes wave {
-        0% { background-position-x: 0; }
-        100% { background-position-x: 1000px; }
-      }
-
-      .home-content {
-        background-color: rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(10px);
-        padding: 40px;
-        border-radius: 20px;
-        max-width: 800px;
-        margin-bottom: 30px;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-      }
-
-      .home h1 {
-        font-size: 3.5rem;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        color: #FFD700;
-        font-weight: 300;
-        letter-spacing: 2px;
-      }
-
-      .spa-tagline {
-        font-size: 1.3rem;
-        margin-bottom: 20px;
-        opacity: 0.9;
-        font-style: italic;
-      }
-
-      /* Gallery Section */
-      #gallery {
-        background: linear-gradient(135deg, #f0f4ff 0%, #e1ecff 100%);
-        padding: 60px 20px;
-      }
-
-      .gallery-container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 25px;
-        margin: 40px 0;
-      }
-
-      .gallery-item {
-        position: relative;
-        overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        transition: all 0.3s ease;
-        cursor: pointer;
-        background: white;
-        aspect-ratio: 4/3;
-      }
-
-      .gallery-item:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-      }
-
-      .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-      }
-
-      .gallery-item:hover img {
-        transform: scale(1.05);
-      }
-
-      .gallery-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(135deg, rgba(107, 115, 255, 0.8), rgba(118, 75, 162, 0.8));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-
-      .gallery-item:hover .gallery-overlay {
-        opacity: 1;
-      }
-
-      .gallery-overlay-text {
-        color: white;
-        text-align: center;
-        padding: 20px;
-      }
-
-      .gallery-overlay h3 {
-        font-size: 1.5rem;
-        margin-bottom: 10px;
-        color: white;
-      }
-
-      .gallery-overlay p {
-        font-size: 1rem;
-        opacity: 0.9;
-      }
-
-      /* Modal for full-size image viewing */
-      .modal {
-        display: none;
-        position: fixed;
-        z-index: 2000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,0.9);
-        animation: fadeIn 0.3s ease;
-      }
-
-      .modal.active {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to { opacity: 1; }
-      }
-
-      .modal-content {
-        position: relative;
-        max-width: 90%;
-        max-height: 90%;
-        margin: auto;
-      }
-
-      .modal-content img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-      }
-
-      .close-modal {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        color: white;
-        font-size: 35px;
-        font-weight: bold;
-        cursor: pointer;
-        background: none;
-        border: none;
-        transition: color 0.3s ease;
-      }
-
-      .close-modal:hover {
-        color: #6B73FF;
-      }
-
-      .gallery-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255,255,255,0.2);
-        backdrop-filter: blur(10px);
-        color: white;
-        border: none;
-        font-size: 24px;
-        padding: 15px 20px;
-        cursor: pointer;
-        border-radius: 50%;
-        transition: all 0.3s ease;
-      }
-
-      .gallery-nav:hover {
-        background: rgba(255,255,255,0.3);
-        transform: translateY(-50%) scale(1.1);
-      }
-
-      .prev-btn {
-        left: -60px;
-      }
-
-      .next-btn {
-        right: -60px;
-      }
-
-      /* Call and Book Online Section */
-      .contact-buttons {
-        display: flex;
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
-        margin-top: 20px;
-      }
-
-      .contact-card {
-        background: rgba(255, 255, 255, 0.95);
-        backdrop-filter: blur(10px);
-        color: #333;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        min-width: 300px;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(255, 255, 255, 0.3);
-      }
-
-      .contact-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 12px 35px rgba(0,0,0,0.25);
-      }
-
-      .contact-card h3 {
-        color: #6B73FF;
-        font-size: 1.6rem;
-        margin-bottom: 15px;
-        font-weight: 500;
-      }
-
-      .phone-number {
-        font-size: 1.9rem;
-        font-weight: bold;
-        color: #764ba2;
-        text-decoration: none;
-        display: block;
-        margin: 15px 0;
-        transition: color 0.3s ease;
-      }
-
-      .phone-number:hover {
-        color: #667eea;
-      }
-
-      .contact-card p {
-        color: #666;
-        line-height: 1.5;
-      }
-
-      /* Booking Form */
-      .booking-form {
-        display: none;
-        background: rgba(255, 255, 255, 0.98);
-        backdrop-filter: blur(15px);
-        color: #333;
-        padding: 35px;
-        border-radius: 20px;
-        box-shadow: 0 15px 40px rgba(0,0,0,0.3);
-        max-width: 550px;
-        margin: 20px auto;
-        position: relative;
-        border: 1px solid rgba(255, 255, 255, 0.4);
-      }
-
-      .booking-form.active {
-        display: block;
-        animation: slideIn 0.3s ease-out;
-      }
-
-      @keyframes slideIn {
-        from { opacity: 0; transform: translateY(-20px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      .booking-form h3 {
-        color: #6B73FF;
-        margin-bottom: 25px;
-        font-size: 2rem;
-        font-weight: 400;
-      }
-
-      .form-group {
-        margin-bottom: 20px;
-        text-align: left;
-      }
-
-      .form-group label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-        color: #555;
-        font-size: 0.95rem;
-      }
-
-      .form-group input,
-      .form-group select,
-      .form-group textarea {
-        width: 100%;
-        padding: 15px;
-        border: 2px solid #e0e0e0;
-        border-radius: 10px;
-        font-size: 1rem;
-        font-family: inherit;
-        transition: all 0.3s ease;
-        box-sizing: border-box;
-        background: rgba(255, 255, 255, 0.8);
-      }
-
-      .form-group input:focus,
-      .form-group select:focus,
-      .form-group textarea:focus {
-        outline: none;
-        border-color: #6B73FF;
-        background: white;
-        box-shadow: 0 0 0 3px rgba(107, 115, 255, 0.1);
-      }
-
-      .form-row {
-        display: flex;
-        gap: 15px;
-      }
-
-      .form-row .form-group {
-        flex: 1;
-      }
-
-      .close-form {
-        position: absolute;
-        top: 15px;
-        right: 20px;
-        background: none;
-        border: none;
-        font-size: 28px;
-        cursor: pointer;
-        color: #999;
-        transition: color 0.3s ease;
-      }
-
-      .close-form:hover {
-        color: #333;
-        transform: scale(1.1);
-      }
-
-      /* Button Styles */
-      .book-button, .call-button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
-        padding: 15px 30px;
-        border: none;
-        border-radius: 25px;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 1.1rem;
-        font-weight: 600;
-        transition: all 0.3s ease;
-        margin: 10px;
-        cursor: pointer;
-        text-align: center;
-        box-shadow: 0 4px 15px rgba(107, 115, 255, 0.3);
-      }
-
-      .book-button:hover, .call-button:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 20px rgba(107, 115, 255, 0.4);
-      }
-
-      .submit-btn {
-        background: linear-gradient(135deg, #6B73FF 0%, #764ba2 100%);
-        color: white;
-        padding: 18px 35px;
-        border: none;
-        border-radius: 25px;
-        font-size: 1.2rem;
-        font-weight: 600;
-        cursor: pointer;
-        width: 100%;
-        transition: all 0.3s ease;
-        margin-top: 15px;
-        box-shadow: 0 4px 15px rgba(107, 115, 255, 0.3);
-      }
-
-      .submit-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(107, 115, 255, 0.4);
-      }
-
-      /* Services and Reviews Containers */
-      .services, .reviews-container {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 25px;
-        margin: 40px 0;
-      }
-
-      #services {
-        background: linear-gradient(135deg, #f5f7ff 0%, #e8f2ff 100%);
-      }
-
-      #specials {
-        background: linear-gradient(135deg, #fff5f5 0%, #ffe8e8 100%);
-      }
-
-      #specials .services {
-        background: transparent;
-      }
-
-      /* Service Box and Review Card */
-      .service-box, .review-card {
-        background: white;
-        margin: 10px;
-        padding: 30px;
-        border-radius: 15px;
-        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-        width: 320px;
-        transition: all 0.3s ease;
-        border: 1px solid rgba(107, 115, 255, 0.1);
-      }
-
-      .service-box:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        border-color: rgba(107, 115, 255, 0.3);
-      }
-
-      .service-box h3, .review-card h3 {
-        color: #6B73FF;
-        font-size: 1.6rem;
-        margin-bottom: 15px;
-        font-weight: 500;
-      }
-
-      .service-box p, .review-card p {
-        color: #666;
-        line-height: 1.7;
-      }
-
-      /* Price Wrapper */
-      .service-box .price-wrapper {
-        margin-top: 20px;
-        background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
-        padding: 15px;
-        border-radius: 10px;
-        display: none;
-        min-height: 100px;
-        border-left: 4px solid #6B73FF;
-      }
-
-      .price-wrapper h4 {
-        margin: 5px 0;
-        color: #333;
-        font-size: 1.1rem;
-      }
-
-      /* Contact Section */
-      #contact {
-        background: linear-gradient(135deg, #e8f5e9 0%, #d4eddb 100%);
-      }
-
-      .appointment-card {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
-      .appointment-map {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background: white;
-        padding: 40px;
-        border-radius: 20px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        border: 1px solid rgba(107, 115, 255, 0.1);
-      }
-
-      .appointment-info {
-        margin-top: 30px;
-        text-align: left;
-        width: 100%;
-      }
-
-      .appointment-info p {
-        margin: 15px 0;
-        font-size: 1.2rem;
-        color: #555;
-      }
-
-      .appointment-info a {
-        color: #6B73FF;
-        text-decoration: none;
-        transition: color 0.3s ease;
-        font-weight: 600;
-      }
-
-      .appointment-info a:hover {
-        color: #764ba2;
-        text-decoration: underline;
-      }
-
-      .appointment-map h3 {
-        margin-top: 25px;
-        color: #6B73FF;
-        font-size: 1.4rem;
-        font-weight: 500;
-      }
-
-      /* Footer */
-      footer {
-        background: linear-gradient(135deg, #333 0%, #555 100%);
-        color: white;
-        text-align: center;
-        padding: 30px 0;
-        margin-top: 50px;
-      }
-
-      /* Responsive Design */
-      @media (max-width: 768px) {
+        /* 导入现代化英文字体 */
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap');
+
+        /* 全局 CSS 变量定义颜色和样式 */
+        :root {
+            --primary-color: #557A46; /* 令人放松的鼠尾草绿 */
+            --secondary-color: #8C6A5D; /* 温暖的大地色 */
+            --bg-light: #F9F8F6;
+            --text-dark: #2C3333;
+            --text-light: #F2F2F2;
+            --white: #FFFFFF;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        /* 基础重置与平滑滚动 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; } /* 启用原生平滑滚动 */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        /* 通用排版与组件 */
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .btn:hover { background-color: #3b5a2f; transform: translateY(-2px); box-shadow: var(--shadow); }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+        /* 导航栏固定在顶部 */
+        header {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            background-color: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            transition: all 0.3s ease;
+        }
         nav {
-          flex-direction: column;
-          padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .logo { font-family: 'Playfair Display', serif; font-size: 1.8rem; font-weight: 700; color: var(--primary-color); cursor: pointer;}
+        .nav-links { display: flex; gap: 25px; align-items: center; }
+        .nav-links li a {
+            font-weight: 500;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .nav-links li a:hover, .nav-links li a.active { color: var(--primary-color); }
+
+        /* 页面区块设置 */
+        .page-section {
+            padding: 100px 0; /* 为固定导航栏留出空间并增加上下间距 */
+            min-height: 80vh;
         }
         
-        nav ul {
-          margin-top: 15px;
+        /* --- 滚动监听渐入渐出动画 (Scroll Reveal) --- */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* 1. Home 首页轮播图 */
+        #home { padding-top: 0; min-height: 100vh; display: flex; align-items: center; }
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+        .hero-slides {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -2;
+        }
+        .slide {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-size: cover; background-position: center;
+            opacity: 0; transition: opacity 1.5s ease-in-out;
+            display: flex; align-items: center; justify-content: center; font-size: 2rem; color: rgba(255,255,255,0.3);
+        }
+        .slide.active { opacity: 1; }
+        .hero-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0, 0, 0, 0.5); z-index: -1;
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 800px; padding: 20px;}
+        .hero-content h1 { font-size: 4rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .hero-content p { font-size: 1.5rem; margin-bottom: 30px; }
+
+        /* 2. Services 服务与价格 */
+        .rates-card {
+            background: linear-gradient(135deg, var(--primary-color), #3b5a2f);
+            color: white; border-radius: 15px; padding: 30px; text-align: center;
+            margin-bottom: 50px; box-shadow: var(--shadow);
+        }
+        .rates-grid {
+            display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; max-width: 700px; margin: 20px auto 0;
+        }
+        .rate-item { font-size: 1.2rem; font-weight: 600; padding: 15px 20px; background: rgba(255,255,255,0.1); border-radius: 10px;}
         
-        .home h1 {
-          font-size: 2.5rem;
+        .services-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;
         }
-
-        .contact-buttons {
-          flex-direction: column;
-          align-items: center;
+        .service-card {
+            background: var(--white); border-radius: 15px; overflow: hidden;
+            box-shadow: var(--shadow); transition: var(--transition);
+            display: flex; flex-direction: column;
         }
-
-        .contact-card {
-          min-width: auto;
-          width: 90%;
-          max-width: 400px;
+        .service-card:hover { transform: translateY(-10px); box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
+        .service-img-container {
+            width: 100%; height: 220px; background-color: #e2e8f0;
+            display: flex; align-items: center; justify-content: center; overflow: hidden; color: #64748b;
         }
-
-        .form-row {
-          flex-direction: column;
-        }
+        .service-img-container img { width: 100%; height: 100%; object-fit: cover; }
         
-        .service-box, .review-card {
-          width: 100%;
-          max-width: 400px;
+        .service-info { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; }
+        .service-info h3 { color: var(--primary-color); margin-bottom: 10px; font-size: 1.5rem; }
+        .service-info p { color: #555; font-size: 0.95rem; margin-bottom: 15px; flex-grow: 1; }
+        .service-tags { font-size: 0.85rem; font-weight: 600; color: var(--secondary-color); background: #fdf5e6; padding: 5px 10px; border-radius: 5px; display: inline-block; width: fit-content; }
+
+        /* 3. About Us 关于我们 - 瀑布流不规则布局 */
+        .about-flex { display: flex; gap: 50px; align-items: flex-start; margin-bottom: 60px; }
+        .about-text { flex: 1; position: sticky; top: 120px; }
+        .about-image { flex: 1; }
+        .about-collage {
+            column-count: 2; /* 两列瀑布流 */
+            column-gap: 15px;
+        }
+        .about-collage img {
+            width: 100%;
+            border-radius: 15px;
+            margin-bottom: 15px;
+            box-shadow: var(--shadow);
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .about-collage img:hover {
+            transform: scale(1.02);
         }
 
-        .gallery-grid {
-          grid-template-columns: 1fr;
-          gap: 20px;
-        }
+        .therapist-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; justify-content: center; }
+        .therapist-card { text-align: center; background: white; padding: 30px 20px; border-radius: 15px; box-shadow: var(--shadow); transition: transform 0.3s; }
+        .therapist-card:hover { transform: translateY(-5px); }
+        .therapist-photo { width: 130px; height: 130px; border-radius: 50%; background: #cbd5e1; margin: 0 auto 20px; display:flex; align-items:center; justify-content:center; color: #64748b; font-size: 0.8rem;}
 
-        .gallery-nav {
-          display: none;
+        /* 4. Booking 在线预约 */
+        .booking-container {
+            max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 15px; box-shadow: var(--shadow);
         }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: 500; }
+        .form-control { width: 100%; padding: 14px; border: 1px solid #ddd; border-radius: 8px; font-family: inherit; font-size: 1rem; transition: border-color 0.3s; }
+        .form-control:focus { outline: none; border-color: var(--primary-color); }
+        .policy-alert { background: #fff0f0; color: #d32f2f; padding: 15px 20px; border-radius: 8px; margin-top: 25px; font-weight: 500; border-left: 5px solid #d32f2f;}
 
-        .modal-content {
-          max-width: 95%;
-          max-height: 85%;
+        /* 5. Reviews 瀑布流评价 */
+        .marquee-wrapper { position: relative; overflow: hidden; padding: 15px 0; }
+        .marquee-track { display: flex; width: max-content; animation: scrollLeft 40s linear infinite; gap: 20px; }
+        .marquee-track.reverse { animation: scrollRight 40s linear infinite; }
+        .review-card {
+            background: white; width: 380px; padding: 25px; border-radius: 12px; box-shadow: var(--shadow);
+            white-space: normal; flex-shrink: 0; border: 1px solid #eee;
         }
-      }
+        .stars { color: #FFD700; margin-bottom: 12px; font-size: 1.2rem; }
+        .reviewer { display: flex; align-items: center; gap: 15px; margin-top: 15px; }
+        .reviewer-avatar { width: 40px; height: 40px; border-radius: 50%; background: #cbd5e1; display:flex; align-items:center; justify-content:center; color:white; font-weight:bold; }
+        @keyframes scrollLeft { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        @keyframes scrollRight { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
 
-      @media (max-width: 480px) {
-        section {
-          padding: 40px 15px;
-        }
-        
-        section h2 {
-          font-size: 2rem;
-        }
-        
-        .home-content {
-          padding: 25px;
-        }
-        
-        .home h1 {
-          font-size: 2rem;
-        }
-        
-        .book-button, .call-button {
-          padding: 12px 25px;
-          font-size: 1rem;
-        }
+        /* 6. FAQ 常见问题 */
+        .faq-item { background: white; margin-bottom: 15px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.03); overflow: hidden; border: 1px solid #eee;}
+        .faq-question { padding: 20px 25px; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: white; border: none; width: 100%; text-align: left; font-size: 1.1rem; font-family: inherit; color: var(--text-dark); transition: background 0.3s;}
+        .faq-question:hover { background: #f8f9fa; }
+        .faq-answer { padding: 0 25px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out, padding 0.3s ease; color: #555; }
+        .faq-item.active .faq-answer { padding: 0 25px 25px; max-height: 200px; }
+        .faq-item.active .faq-icon { transform: rotate(45deg); color: var(--primary-color); }
+        .faq-icon { transition: transform 0.3s ease; font-size: 1.5rem; font-weight: 300; }
 
-        .phone-number {
-          font-size: 1.6rem;
-        }
+        /* 7. Contact 联系与位置 */
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }
+        .contact-info-card { background: white; padding: 40px; border-radius: 15px; box-shadow: var(--shadow); }
+        .contact-info-card h3 { margin-bottom: 25px; color: var(--primary-color); font-size: 1.8rem; }
+        .contact-info-card p { margin-bottom: 15px; display: flex; align-items: flex-start; gap: 10px; font-size: 1.05rem; }
+        .map-container { border-radius: 15px; overflow: hidden; box-shadow: var(--shadow); height: 100%; min-height: 400px; background:#e2e8f0; display:flex; align-items:center; justify-content:center; color: #64748b;}
 
-        .gallery-grid {
-          grid-template-columns: 1fr;
-          gap: 15px;
-          margin: 20px 0;
+        /* Footer */
+        footer { background: var(--text-dark); color: var(--white); text-align: center; padding: 40px 20px; margin-top: 40px;}
+
+        /* 响应式设计 */
+        @media (max-width: 992px) {
+            .about-flex, .contact-grid { flex-direction: column; }
+            .about-text { position: static; }
+            .hero-content h1 { font-size: 3rem; }
+            .nav-links { display: none; } /* 移动端导航简化 */
+            .about-collage { column-count: 2; }
         }
-      }
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 2.5rem; }
+            .rates-grid { grid-template-columns: 1fr; }
+            .section-title { font-size: 2rem; }
+            .about-collage { column-count: 1; }
+        }
     </style>
-  </head>
+</head>
+<body>
 
-  <body>
-    <!-- Navbar -->
-    <nav>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#specials">Specials</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <!-- 顶部导航栏 -->
+    <header id="header">
+        <nav>
+            <div class="logo"><a href="#home">Asian Massage</a></div>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#booking">Book Online</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#booking" class="btn" style="padding: 8px 20px; font-size: 0.9rem; color: white;">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <!-- Home Section -->
-    <section id="home" class="home">
-      <div class="home-content">
-        <h1>King Foot Massage</h1>
-        <p class="spa-tagline">Your sanctuary of tranquility and rejuvenation</p>
-      </div>
-
-      <!-- Call and Book Online Cards -->
-      <div class="contact-buttons">
-        <!-- Call Card -->
-        <div class="contact-card">
-          <h3>📞 Call for Appointment</h3>
-          <a href="tel:+1-469-639-0889" class="phone-number">469-639-0889</a>
-          <p>Speak directly with our friendly staff to schedule your perfect massage experience within 30 minutes.</p>
+    <!-- 1. HOME 首页 (包含渐变轮播背景) -->
+    <section id="home">
+        <div class="hero">
+            <div class="hero-slides">
+                <!-- 服务项目图片 -->
+                <div class="slide active" style="background-image: url('https://i.pinimg.com/1200x/70/1e/5e/701e5e53724d601f7c16752299271912.jpg');"></div>
+                <div class="slide" style="background-image: url('https://i.pinimg.com/1200x/3a/73/f3/3a73f36208166db7f60ecd1a6e07bd25.jpg');"></div>
+                <div class="slide" style="background-image: url('https://i.pinimg.com/1200x/dd/ed/87/dded87f6d5c7d1d153542cafe72b2f46.jpg');"></div>
+                <div class="slide" style="background-image: url('https://i.pinimg.com/736x/fd/84/4f/fd844fbae05b6832c299b71d50a2dd4d.jpg');"></div>
+                <div class="slide" style="background-image: url('https://i.pinimg.com/1200x/96/5f/6a/965f6ad310e336264f38883344e89d03.jpg');"></div>
+                <!-- About Us 环境图片 -->
+                <div class="slide" style="background-image: url('https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg');"></div>
+                <div class="slide" style="background-image: url('https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg');"></div>
+                <div class="slide" style="background-image: url('https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg');"></div>
+                <div class="slide" style="background-image: url('https://i.pinimg.com/736x/a4/c5/f0/a4c5f0fb2704f75aa94a247e18a4af14.jpg');"></div>
+                <div class="slide" style="background-image: url('https://i.pinimg.com/736x/85/e4/e0/85e4e0455458e84ff5b39582cf45a340.jpg');"></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content container reveal active"> <!-- 首页内容默认展示，无需等待滚动 -->
+                <h1>A Peaceful Haven for Your Body and Mind</h1>
+                <p>Experience professional, restorative therapy designed to melt away your stress and relieve your pain.</p>
+                <a href="#booking" class="btn">Book Your Session Today</a>
+            </div>
         </div>
-
-        <!-- Book Online Card -->
-        <div class="contact-card">
-          <h3>💻 Book Online</h3>
-          <button class="book-button" onclick="showBookingForm()">Schedule Now</button>
-          <p>Use our convenient online form and we'll confirm your appointment within 30 minutes.</p>
-        </div>
-      </div>
-
-      <!-- Booking Form (Initially Hidden) -->
-      <div id="bookingForm" class="booking-form">
-        <button class="close-form" onclick="hideBookingForm()">&times;</button>
-        <h3>Schedule Your Visit</h3>
-        <form onsubmit="submitBooking(event)">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="firstName">First Name *</label>
-              <input type="text" id="firstName" name="firstName" required>
-            </div>
-            <div class="form-group">
-              <label for="lastName">Last Name *</label>
-              <input type="text" id="lastName" name="lastName" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" name="phone" required>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email">
-          </div>
-
-          <div class="form-group">
-            <label for="people">Number of People *</label>
-            <select id="people" name="people" required>
-              <option value="">Select Number</option>
-              <option value="1">1 Person</option>
-              <option value="2">2 People</option>
-              <option value="3">3 People</option>
-              <option value="4">4 People</option>
-              <option value="5+">5+ People (Call for Group Booking)</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="date">Preferred Date *</label>
-              <input type="date" id="date" name="date" required>
-            </div>
-            <div class="form-group">
-              <label for="time">Preferred Time *</label>
-              <input type="time" id="time" name="time" min="09:00" max="22:00" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="service">Preferred Service</label>
-            <select id="service" name="service">
-              <option value="">Select a Service</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 30min">Full Body Massage (30min) - $50 Cash/$55 Card</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 60min">Full Body Massage (60min) - $70 Cash/$75 Card</option>
-              <option value="Full Body Massage (Swedish/Deep Tissue) - 90min">Full Body Massage (90min) - $100 Cash/$105 Card</option>
-              <option value="Combo Special (Body+Foot) - 60min">Combo Special (Body+Foot) 60min - $70 Cash/$75 Card</option>
-              <option value="Combo Special (Body+Foot) - 90min">Combo Special (Body+Foot) 90min - $100 Cash/$105 Card</option>
-              <option value="Foot Massage (cloth on) - 30min">Foot Massage (30min) - $35 Cash/$40 Card</option>
-              <option value="Foot Massage (Head+Arm+Foot+Back) - 60min">Foot Massage (Head+Arm+Foot+Back) 60min - $60 Cash/$65 Card</option>
-              <option value="Foot Massage (Head+Arm+Foot+Back) - 90min">Foot Massage (Head+Arm+Foot+Back) 90min - $90 Cash/$95 Card</option>
-              <option value="Chair Massage - 15min">Chair Massage (15min) - $20</option>
-              <option value="Chair Massage - 20min">Chair Massage (20min) - $30</option>
-              <option value="Chair Massage - 30min">Chair Massage (30min) - $40</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="addons">Add-ons (Optional)</label>
-            <select id="addons" name="addons" multiple>
-              <option value="Hot Stone (+$10)">Hot Stone (+$10)</option>
-              <option value="Essential Oil (+$10)">Essential Oil (+$10)</option>
-              <option value="CBD Oil/Cream (+$10)">CBD Oil/Cream (+$10)</option>
-            </select>
-            <small style="color: #666;">Hold Ctrl (PC) or Cmd (Mac) to select multiple options</small>
-          </div>
-
-          <div class="form-group">
-            <label for="notes">Special Requests</label>
-            <textarea id="notes" name="notes" rows="3" placeholder="Any preferences, health considerations, or special requests..."></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Request Appointment</button>
-          <p style="font-size: 0.9rem; color: #777; margin-top: 15px; text-align: center;">
-            We'll contact you within 30 minutes to confirm your appointment details.
-          </p>
-        </form>
-      </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-      <h2>Our Massage Services</h2>
-      <h4>Hover or tap for detailed pricing information</h4>
-      <div class="services">
-        <div class="service-box">
-          <h3>Full Body Massage</h3>
-          <p>
-            Choose between Swedish relaxation or Deep Tissue therapy massage to target your specific needs and preferences.
-          </p>
-          <div class="price-wrapper">
-            <h4>30 min: $50 Cash / $55 Card</h4>
-            <h4>60 min: $70 Cash / $75 Card</h4>
-            <h4>90 min: $100 Cash / $105 Card</h4>
-          </div>
-        </div>
+    <!-- 2. SERVICES 服务项目 -->
+    <section id="services" class="page-section bg-light">
+        <div class="container reveal">
+            <h2 class="section-title">Services & Pricing</h2>
+            <p class="section-subtitle">Tailored treatments to address your specific pain points and relaxation needs.</p>
 
-        <div class="service-box">
-          <h3>Combo Special (Body + Foot)</h3>
-          <p>
-            Get the best of both worlds with our combination massage that includes both body and foot massage for complete relaxation.
-          </p>
-          <div class="price-wrapper">
-            <h4>60 min: $70 Cash / $75 Card</h4>
-            <h4>90 min: $100 Cash / $105 Card</h4>
-          </div>
-        </div>
+            <div class="rates-card">
+                <h3>Standard Rates</h3>
+                <div class="rates-grid">
+                    <div class="rate-item">30 Minutes: $60.00</div>
+                    <div class="rate-item">60 Minutes: $80.00</div>
+                    <div class="rate-item">90 Minutes: $120.00</div>
+                    <div class="rate-item">120 Minutes: $160.00</div>
+                </div>
+            </div>
 
-        <div class="service-box">
-          <h3>Foot Massage</h3>
-          <p>
-            Our signature foot massage with cloth on, or comprehensive treatment including Head, Arm, Foot and Back massage.
-          </p>
-          <div class="price-wrapper">
-            <h4>30 min (cloth on): $35 Cash / $40 Card</h4>
-            <h4>60 min (Head+Arm+Foot+Back): $60 Cash / $65 Card</h4>
-            <h4>90 min (Head+Arm+Foot+Back): $90 Cash / $95 Card</h4>
-          </div>
+            <div class="services-grid">
+                <!-- Deep Tissue -->
+                <div class="service-card">
+                    <div class="service-img-container">
+                        <img src="https://i.pinimg.com/1200x/70/1e/5e/701e5e53724d601f7c16752299271912.jpg" alt="Deep Tissue Massage">
+                    </div>
+                    <div class="service-info">
+                        <h3>Deep Tissue</h3>
+                        <p>Targets the inner layers of your muscles and connective tissues. Ideal for athletes, office workers with chronic posture pain, and those recovering from injuries.</p>
+                        <span class="service-tags">Best for: Chronic Pain, Muscle Knots</span>
+                    </div>
+                </div>
+                <!-- Accu-pressure -->
+                <div class="service-card">
+                    <div class="service-img-container">
+                        <img src="https://i.pinimg.com/1200x/3a/73/f3/3a73f36208166db7f60ecd1a6e07bd25.jpg" alt="Accu-pressure Therapy">
+                    </div>
+                    <div class="service-info">
+                        <h3>Accu-pressure</h3>
+                        <p>Uses precise finger placement and pressure over specific points along the body. Relieves stress, improves blood circulation, and restores energy balance.</p>
+                        <span class="service-tags">Best for: Migraines, Energy Flow</span>
+                    </div>
+                </div>
+                <!-- Medium Pressure -->
+                <div class="service-card">
+                    <div class="service-img-container">
+                        <img src="https://i.pinimg.com/1200x/dd/ed/87/dded87f6d5c7d1d153542cafe72b2f46.jpg" alt="Medium Pressure Massage">
+                    </div>
+                    <div class="service-info">
+                        <h3>Medium Pressure</h3>
+                        <p>The perfect balance. Firmer than a light touch to work out minor tensions, but gentle enough to ensure total relaxation without discomfort.</p>
+                        <span class="service-tags">Best for: General Fatigue, Mild Tension</span>
+                    </div>
+                </div>
+                <!-- Light Touch -->
+                <div class="service-card">
+                    <div class="service-img-container">
+                        <img src="https://i.pinimg.com/736x/fd/84/4f/fd844fbae05b6832c299b71d50a2dd4d.jpg" alt="Light Touch Spa Therapy">
+                    </div>
+                    <div class="service-info">
+                        <h3>Light Touch</h3>
+                        <p>A soothing, gentle massage aimed at pure relaxation. It calms the nervous system, promotes better sleep, and melts away the day's anxiety.</p>
+                        <span class="service-tags">Best for: Anxiety, Insomnia, Sensitivity</span>
+                    </div>
+                </div>
+                <!-- Back-walking -->
+                <div class="service-card">
+                    <div class="service-img-container">
+                        <img src="https://i.pinimg.com/1200x/96/5f/6a/965f6ad310e336264f38883344e89d03.jpg" alt="Back-walking Therapy">
+                    </div>
+                    <div class="service-info">
+                        <h3>Back-walking</h3>
+                        <p>An ancient technique providing deep compression. The therapist uses their feet to deliver broad, consistent pressure, ideal for large muscle groups.</p>
+                        <span class="service-tags">Best for: Severe Back Tension</span>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="service-box">
-          <h3>Chair Massage</h3>
-          <p>
-            Quick and convenient chair massage perfect for targeting neck, shoulders, and back tension during your busy day.
-          </p>
+    <!-- 3. ABOUT US 关于我们 -->
+    <section id="about" class="page-section">
+        <div class="container reveal">
+            <h2 class="section-title">About Us</h2>
+            <p class="section-subtitle">Dedicated to your wellness in a pristine, tranquil environment.</p>
+
+            <div class="about-flex">
+                <div class="about-text">
+                    <h3 style="font-family: 'Playfair Display', serif; font-size: 2rem; color: var(--primary-color); margin-bottom: 20px;">Your Sanctuary in Blaine</h3>
+                    <p style="margin-bottom: 15px;">At Asian Massage, we believe that true healing begins in a peaceful environment. Our therapy rooms are designed to be impeccably clean, highly private, and extremely quiet, allowing you to completely disconnect from the outside world.</p>
+                    <p>We take pride in our highly trained therapists who understand the anatomy of stress. We ensure that every client knows exactly who is taking care of them. Our certified professionals customize every session to fit your immediate needs.</p>
+                </div>
+                <!-- 瀑布流不规则图片展示区 -->
+                <div class="about-image about-collage">
+                    <img src="https://i.pinimg.com/736x/4c/2b/cb/4c2bcb39fbc7189277e8e505c2e1bc8f.jpg" alt="Spa environment 1">
+                    <img src="https://i.pinimg.com/736x/c0/e8/3f/c0e83fc3058518c785d6cfe1b15da601.jpg" alt="Spa environment 2">
+                    <img src="https://i.pinimg.com/736x/21/8f/4c/218f4cd988ca278667bd28ff54a577ff.jpg" alt="Spa environment 3">
+                    <img src="https://i.pinimg.com/736x/a4/c5/f0/a4c5f0fb2704f75aa94a247e18a4af14.jpg" alt="Spa environment 4">
+                    <img src="https://i.pinimg.com/736x/85/e4/e0/85e4e0455458e84ff5b39582cf45a340.jpg" alt="Spa environment 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. BOOKING 在线预约系统 -->
+    <section id="booking" class="page-section bg-light" style="background-color: #f1f5f9;">
+        <div class="container reveal">
+            <h2 class="section-title">Book Your Appointment</h2>
+            <p class="section-subtitle">Select your preferred time, service, and let us take care of the rest.</p>
+
+            <div class="booking-container">
+                <form onsubmit="event.preventDefault(); alert('Thank you! Your booking request has been received. We will call you shortly to confirm.');">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label>Select Service *</label>
+                            <select class="form-control" required>
+                                <option value="">-- Choose a Service --</option>
+                                <option>Deep Tissue</option>
+                                <option>Accu-pressure</option>
+                                <option>Medium Pressure</option>
+                                <option>Light Touch</option>
+                                <option>Back-walking</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Duration *</label>
+                            <select class="form-control" required>
+                                <option value="30">30 Minutes ($60)</option>
+                                <option value="60" selected>60 Minutes ($80)</option>
+                                <option value="90">90 Minutes ($120)</option>
+                                <option value="120">120 Minutes ($160)</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label>Preferred Date *</label>
+                            <input type="date" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Preferred Time *</label>
+                            <input type="time" class="form-control" min="09:00" max="21:30" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Therapist Preference</label>
+                            <select class="form-control">
+                                <option value="any">Any Available</option>
+                                <option value="anna">Anna</option>
+                                <option value="sophia">Sophia</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" class="form-control" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone Number *</label>
+                            <input type="tel" class="form-control" placeholder="763-XXX-XXXX" required>
+                        </div>
+                    </div>
+                    
+                    <div class="policy-alert">
+                        <strong>Strict Shop Policy:</strong> Please do not ask for anything sexual. You will be asked to leave immediately. This is a professional therapeutic establishment.
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; margin-top: 25px; font-size: 1.1rem; padding: 15px;">Confirm Booking Request</button>
+                    <p style="text-align: center; margin-top: 15px; font-size: 0.9rem; color: #666;">Please let your Therapist know which type of Massage you would like before starting.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. REVIEWS 客户评价 (双行反向瀑布流) -->
+    <section id="reviews" class="page-section overflow-hidden">
+        <div class="container reveal" style="max-width: 100%;">
+            <h2 class="section-title">What Our Clients Say</h2>
+            <p class="section-subtitle">Authentic feedback from Google and Yelp reviews.</p>
+
+            <!-- Row 1: Left Scrolling -->
+            <div class="marquee-wrapper">
+                <div class="marquee-track" id="track1">
+                    <!-- 通过 JS 填充 -->
+                </div>
+            </div>
+
+            <!-- Row 2: Right Scrolling -->
+            <div class="marquee-wrapper">
+                <div class="marquee-track reverse" id="track2">
+                    <!-- 通过 JS 填充 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FAQ 常见问题 -->
+    <section id="faq" class="page-section bg-light" style="background-color: #f8f9fa;">
+        <div class="container reveal" style="max-width: 800px;">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know before your visit.</p>
+
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">How early should I arrive for my appointment? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>We recommend arriving 10-15 minutes before your scheduled appointment. This gives you time to check in, use the restroom, and discuss your preferences or pain points with your therapist without cutting into your actual massage time.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Can I get a massage if I have an injury? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes, but it is crucial to inform us when booking and let your therapist know before the session begins. We can adapt techniques (like avoiding the injured area or using Light Touch) to accommodate healing. However, please consult a doctor for severe or recent injuries prior to booking.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">What is your cancellation policy? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>We kindly ask that you provide at least 24 hours' notice if you need to cancel or reschedule your appointment. This allows us out of respect for our therapists' time to offer the slot to another client.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">Is there convenient parking at the shop? <span class="faq-icon">+</span></button>
+                    <div class="faq-answer">
+                        <p>Yes, absolutely! We have a spacious, free parking lot located right in front of our storefront, ensuring a stress-free arrival and departure experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. CONTACT & LOCATION 联系方式与地址 -->
+    <section id="contact" class="page-section">
+        <div class="container reveal">
+            <h2 class="section-title">Location & Contact</h2>
+            <p class="section-subtitle">Find your way to relaxation.</p>
+
+            <div class="contact-grid">
+                <div class="contact-info-card">
+                    <h3>Asian Massage</h3>
+                    <p><strong>📍 Address:</strong> <br>10561 University Ave NE,<br>Blaine, MN 55434</p>
+                    <div style="margin: 20px 0; border-top: 1px solid #eee;"></div>
+                    <p><strong>📞 Phone:</strong> <br><a href="tel:7637674041" style="color: var(--primary-color); font-weight: bold; font-size: 1.2rem;">763-767-4041</a></p>
+                    <div style="margin: 20px 0; border-top: 1px solid #eee;"></div>
+                    <p><strong>🕒 Business Hours:</strong> <br>Open 7 Days A Week<br>9:00 AM – 9:30 PM</p>
+                    
+                    <div style="margin-top: 35px;">
+                        <a href="#booking" class="btn">Book Appointment</a>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <!-- 嵌入式谷歌地图 -->
+                    <iframe 
+                        src="https://maps.google.com/maps?q=10561+University+Ave+NE,+Blaine,+MN+55434&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Asian Massage. All Rights Reserved.</p>
+        <p style="font-size: 0.85rem; margin-top: 10px; color: #aaa;">10561 University Ave NE, Blaine, MN 55434 | 763-767-4041</p>
+    </footer>
+
+    <script>
+        // --- 1. 首页背景轮播 (Background Carousel) ---
+        const slides = document.querySelectorAll('.hero-slides .slide');
+        let currentSlide = 0;
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 5000); // 每5秒切换一次
+
+
+        // --- 2. 滚动监听：板块渐入动画 (Scroll Reveal Animation) ---
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOptions = {
+            threshold: 0.15, // 当板块15%进入视口时触发
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    // 动画触发后可以取消观察以提高性能，也可以保留以实现反复触发
+                    // observer.unobserve(entry.target); 
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => revealOnScroll.observe(el));
+
+
+        // --- 3. 导航栏高亮与平滑滚动偏移 ---
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                // 考虑固定导航栏的高度偏移
+                if (pageYOffset >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+
+        // --- 4. FAQ 手风琴开关逻辑 ---
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const faqItem = button.parentElement;
+                const isActive = faqItem.classList.contains('active');
+                
+                // 关闭其他所有的FAQ
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    item.classList.remove('active');
+                    item.querySelector('.faq-icon').innerText = '+';
+                });
+
+                // 切换当前的FAQ
+                if (!isActive) {
+                    faqItem.classList.add('active');
+                    button.querySelector('.faq-icon').innerText = '×';
+                }
+            });
+        });
+
+
+        // --- 5. 无缝瀑布流评价生成 ---
+        const reviews = [
+            { name: "Sarah M.", avatar: "S", text: "Absolutely incredible deep tissue massage! The environment is so clean and peaceful. Highly recommend Anna." },
+            { name: "David K.", avatar: "D", text: "Best massage in Blaine. I came in with severe back pain and left feeling completely refreshed. Very professional." },
+            { name: "Emily R.", avatar: "E", text: "The booking process was easy, and the therapists are very attentive. The 90-minute session is worth every penny." },
+            { name: "Michael T.", avatar: "M", text: "Great facility. They strictly enforce their professional policies, which made me feel very comfortable and respected." },
+            { name: "Jessica L.", avatar: "J", text: "Tried the back-walking service for the first time. It was life-changing! Perfect pressure." },
+            { name: "Brian W.", avatar: "B", text: "Clean rooms, soothing music, and excellent medium pressure massage. My new go-to spot." }
+        ];
+
+        const createReviewCard = (review) => `
+            <div class="review-card">
+                <div class="stars">★★★★★</div>
+                <p style="font-size: 0.95rem; color: #444; line-height: 1.6;">"${review.text}"</p>
+                <div class="reviewer">
+                    <div class="reviewer-avatar">${review.avatar}</div>
+                    <div>
+                        <strong style="font-size: 0.9rem; color: var(--text-dark);">${review.name}</strong>
+                        <div style="font-size: 0.75rem; color: #888;">Google Review</div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+        // 将评价分成两组，确保无限滚动无缝衔接
+        const track1Html = reviews.map(createReviewCard).join('');
+        const track2Html = [...reviews].reverse().map(createReviewCard).join('');
+
+        // 复制多次内容以实现长流滚动 (避免滚动留白)
+        document.getElementById('track1').innerHTML = track1Html.repeat(4);
+        document.getElementById('track2').innerHTML = track2Html.repeat(4);
+    </script>
+</body>
+</html>
